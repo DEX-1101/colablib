@@ -25,7 +25,7 @@ def clone_repo(url, cwd=None, directory=None, branch=None, commit_hash=None, rec
             directory = parsed_url
             
         if os.path.exists(os.path.join(cwd, parsed_url) if cwd else directory):
-            message = f"Directory '{parsed_url}' already exists."
+            message = f"Directory [ {parsed_url} ] already exists."
             if not quiet and not batch:
                 color = "yellow"
                 cprint(message, color=color)
@@ -42,7 +42,7 @@ def clone_repo(url, cwd=None, directory=None, branch=None, commit_hash=None, rec
         result = subprocess.run(cmd, text=True, cwd=cwd, capture_output=True)
 
         if result.returncode == 0:
-            message = f"Cloning '{parsed_url}' was successful."
+            message = f"Cloning [ {parsed_url} ] completed."
         else:
             message = f"Cloning '{parsed_url}' failed. Error: {result.stderr}"
 
