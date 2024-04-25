@@ -9,7 +9,7 @@ setup(
         'requests==2.31.0',
         'tqdm==4.65.0',
         'PyYAML==6.0',
-        'gdown==4.7.1',
+        'gdown==5.1.0',
         'toml==0.10.2',
         'rarfile==4.0',
         'xmltodict==0.13.0',
