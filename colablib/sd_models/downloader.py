@@ -142,8 +142,8 @@ def get_modelname(url: str, quiet: bool=False, user_header: str=None) -> None:
     filename = os.path.basename(url) if "drive/MyDrive" in url or url.endswith(SUPPORTED_EXTENSIONS) else get_filename(url, user_header=user_header)
 
     if filename.endswith(SUPPORTED_EXTENSIONS):
-        if not quiet:
-            cprint(f"Filename : {filename}", color="flat_cyan")
+        #if not quiet:
+            #cprint(f"Filename : {filename}", color="flat_cyan")
         return filename
 
     if not quiet:
