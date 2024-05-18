@@ -66,7 +66,6 @@ def aria2_download(download_dir: str, filename: str , url: str, quiet: bool=Fals
     
     if not quiet:
         elapsed_time = calculate_elapsed_time(start_time)
-        print_line(0)
         cprint(f"Done in {elapsed_time}.", color="flat_cyan")
 
 def gdown_download(url: str, dst: str, quiet: bool=False):
