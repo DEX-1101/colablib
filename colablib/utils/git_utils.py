@@ -42,9 +42,9 @@ def clone_repo(url, cwd=None, directory=None, branch=None, commit_hash=None, rec
         result = subprocess.run(cmd, text=True, cwd=cwd, capture_output=True)
 
         if result.returncode == 0:
-            message = f"Cloning [ {parsed_url} ] completed."
+            message = f"Cloning [{parsed_url}] completed."
         else:
-            message = f"Cloning [ {parsed_url} ] failed. Error: {result.stderr}"
+            message = f"Cloning [{parsed_url}] failed. Error: {result.stderr}"
 
         if not quiet and not batch:
             color = "flat_cyan" if not any(item in message for item in ["Failed", "Error", "failed", "error"]) else "red"
