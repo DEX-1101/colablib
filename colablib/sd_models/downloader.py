@@ -46,7 +46,8 @@ def aria2_download(download_dir: str, filename: str , url: str, quiet: bool=Fals
     """
     if not quiet:
         start_time = time.time()
-        cprint(f"Downloading [ {filename} ] ...", color="flat_cyan")
+        cprint(f"Downloading [ {filename} ] ...")
+        #cprint(f"Downloading [ {filename} ] ...", color="flat_cyan")
 
     aria2_config = {
         "console-log-level"         : "error",
@@ -67,7 +68,8 @@ def aria2_download(download_dir: str, filename: str , url: str, quiet: bool=Fals
     if not quiet:
         elapsed_time = calculate_elapsed_time(start_time)
         print_line(0)
-        cprint(f"Done in {elapsed_time}.", color="flat_cyan")
+        #cprint(f"Done in {elapsed_time}.", color="flat_cyan")
+        cprint(f"Done in {elapsed_time}.")
 
 def gdown_download(url: str, dst: str, quiet: bool=False):
     """
@@ -144,7 +146,8 @@ def get_modelname(url: str, quiet: bool=False, user_header: str=None) -> None:
 
     if filename.endswith(SUPPORTED_EXTENSIONS):
         if not quiet:
-            cprint(f"Filename : {filename}", color="flat_cyan")
+            #cprint(f"Filename : {filename}", color="flat_cyan")
+            cprint(f"Filename : {filename}")
         return filename
 
     if not quiet:
