@@ -50,6 +50,7 @@ def aria2_download(download_dir: str, filename: str , url: str, quiet: bool=Fals
 
     aria2_config = {
         "console-log-level"         : "error",
+        "download-result"           : "hide",
         "summary-interval"          : 0,
         "header"                    : user_header if "huggingface.co" in url else None,
         "continue"                  : True,
