@@ -8,7 +8,7 @@ from tqdm import tqdm
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from ..utils.py_utils import get_filename, calculate_elapsed_time
-from ..colored_print import cprint
+from ..colored_print import cprint, print_line
 
 SUPPORTED_EXTENSIONS = (".ckpt", ".safetensors", ".pt", ".pth")
 
